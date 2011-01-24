@@ -1,0 +1,67 @@
+
+body {	
+
+	font: 12px Arial, Helvetica, sans-serif;
+	
+}
+
+.wrap {
+	margin: -105px 0 0 -480px;
+	position: absolute; top: 50%; left: 50%;
+	width: 960px;
+}
+
+/*
+ * Box
+*/
+.box {
+	margin: 0 0 20px 0;
+	padding: 5px;
+	background: #f0fbc1;
+	border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.box h1 {
+	margin: 5px 0;
+	padding: 0 0 0 10px;
+	line-height: 2em;
+	font-size: 2em;
+	color: #656565;
+	font-weight: normal;
+}
+.box h1 img { margin-right: 5px; }
+
+	/* Button */
+.box .btn {
+	margin: 0 5px; padding: 9px 15px;
+	display: block;
+	float: right; 
+	color: #7b7b7b;
+	font-size: 18px; font-family: Arial, Helvetica, sans-serif;
+	background: #dddddd url('images/btn-bg.gif') repeat-x center 5px;
+	border: 1px solid #7b7b7b;
+}
+.box .btn img { vertical-align: middle; margin: 0 5px 0 0; }
+.box .btn:hover { text-decoration: none; background-position: 0 25px; }
+
+	/* Item */
+.box div.item {
+	padding: 10px 15px;
+	border-bottom: 1px solid #eee;
+	background: #fff;
+}
+
+/*.box div.item:last-child { border-bottom: none; }*/
+
+
+.box div.item input {
+	padding: 5px 10px;
+	width: 725px;
+	font-size: 2em;
+}
+
+.box div.item label {
+	display: inline-block; *display: inline; zoom: 1;
+	font-size: 1.6em;
+	padding: 0 15px 0 0;
+	width: 150px;
+}
