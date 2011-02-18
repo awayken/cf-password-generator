@@ -3,7 +3,7 @@
 
 	local = {};
 	
-	if(!isnull(form.domain)) {
+	if(isDefined("form.domain")) {
 		local.password = new password( form.domain, 'ENTER CUSTOM SALT' );
 	}
 
@@ -38,13 +38,13 @@
 		</h1>
 		<div class="item">
 			<label>Domain</label>
-			<input type="text" id="domain" name="domain" value="<cfif !isnull(local.password)><cfoutput>#local.password.getDomain()#</cfoutput></cfif>" />
+			<input type="text" id="domain" name="domain" value="<cfif isDefined("local.password")><cfoutput>#local.password.getDomain()#</cfoutput></cfif>" />
 		</div>			
 		</form>	
 	
 		<div class="item">
 			<label>Password</label>
-			<input type="text" id="password" name="password" value="<cfif !isnull(local.password)><cfoutput>#local.password.getHash()#</cfoutput></cfif>" />
+			<input type="text" id="password" name="password" value="<cfif isDefined("local.password")><cfoutput>#local.password.getHash()#</cfoutput></cfif>" />
 		</div>
 	</div>
 	
