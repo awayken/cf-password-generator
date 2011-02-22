@@ -1,5 +1,5 @@
 #summary The history and background of cf-password-generator
-#labels Phase-History,Featured
+#labels Phase-History
 
 = History =
 
