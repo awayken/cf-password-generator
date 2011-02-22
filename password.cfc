@@ -6,9 +6,9 @@
 	</cfscript>
 		
 	<cffunction name="init" access="public">
-		<cfargument name="domain" default="">
-		<cfargument name="salt" default="">
-		<cfargument name="algorithm" default="MD5">
+		<cfargument name="domain" type="string" required="no" default="">
+		<cfargument name="salt" type="string" required="yes">
+		<cfargument name="algorithm" type="string" required="no" default="MD5">
 		
 		<cfscript>
 			if (arguments.salt == "ENTER CUSTOM SALT" OR !len(arguments.salt)) {

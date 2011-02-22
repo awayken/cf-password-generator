@@ -2,7 +2,7 @@
 	local = {};
 	
 	if(isDefined("form.domain")) {
-		local.password = new password( form.domain, 'ENTER CUSTOM SALT' );
+		local.password = new password( trim(form.domain), 'ENTER CUSTOM SALT' );
 	}
 </cfscript>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
