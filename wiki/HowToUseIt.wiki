@@ -10,7 +10,6 @@ Here are the basic steps for using cf-password-generator:
   # Proceed to the [http://code.google.com/p/cf-password-generator/source/checkout Source tab] for our project page. Follow the directions for checking out the trunk of the project using Subversion.
     * `svn checkout http://cf-password-generator.googlecode.com/svn/trunk/ cf-password-generator-read-only`
   # Copy or move the directory to your !ColdFusion webroot. At L&S we use [http://www.adobe.com/products/coldfusion/ Adobe ColdFusion 9] on our development and production servers. You can also use [http://www.getrailo.org/ Railo] or [http://www.openbluedragon.org/ Open BlueDragon] with [http://jetty.codehaus.org/jetty/ Jetty] or [http://tomcat.apache.org/ Apache Tomcat].
-    * cf-password-generator works on Adobe !ColdFusion 9 and Railo 3.2.
-    * There is [http://code.google.com/p/cf-password-generator/issues/detail?id=4 a known issue with Open BlueDragon 1.4]. We are working to fix that.
+    * cf-password-generator works on Adobe !ColdFusion 9, Railo 3.2, and Open BlueDragon 1.4.
   # Edit `index.cfm` to personalize the salt on line 5.
   # Finally, browse to the `index.cfm` file and generate some passwords.
