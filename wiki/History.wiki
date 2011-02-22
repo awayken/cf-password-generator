@@ -1,0 +1,13 @@
+#summary The history and background of cf-password-generator
+#labels Phase-History
+
+cf-password-generator, like a lot of open source projects, was born out of a need. Our need in this case was two-fold: to adopt strong passwords for the admin accounts of some of our web properties (primarily Wordpress sites) and to make it easy for any developer on the team to get access to this password.
+
+We considered, and rejected, the following strategies.
+
+||Strategy||Rejection||
+||Use the same password||If this password was cracked, all similarly-protected sites would be potentially compromised.||
+||Store passwords in a file||If this file was stolen, all the sites would be compromised, as there is no security on the file. Also, the file could be lost or deleted.||
+||Store passwords in a file on an encrypted disc||Much like the above, but this one was a little better since the file would be protected. Unfortunately, only one person could access the encrypted disc at a time.||
+
+"What if we programmed something to generate the password for us?" Slowly the wheels started turning, the fingers started typing, and we had our cf-password-generator.
