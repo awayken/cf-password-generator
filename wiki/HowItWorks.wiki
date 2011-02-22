@@ -1,0 +1,13 @@
+#summary An overview of how cf-password-generator actually generates passwords.
+
+= How It Works =
+
+cf-password-generator is basically two parts, the index CFM and the password component. The index CFM has a web form with two fields, Domain and Password, and a button, Generate. You paste the domain (or a full URL) into the Domain textbox and hit the button. What you're given back is a hashed password, sufficiently strong and unguessable. When the index CFM posts, it creates a new instance of the password component by passing it the value from the Domain textbox and a custom salt that you create yourself.
+
+This [http://en.wikipedia.org/wiki/Salt_%28cryptography%29 salt] is what keeps your passwords different and unguessable from someone else using cf-password-generator. It can be any sort of value, as long as it can be passed as a string. The default salt is "ENTER CUSTOM SALT". If you try to use cf-password-generator with the default salt, it will throw an exception, which serves as a good reminder more-so than a security feature.
+
+The password component is pretty straightforward. It has three functions, init, getHash, and getDomain, and two properties, password and domain. getHash and getDomain return the properties password and domain respectively. The init function does all the work. It takes in domain, salt, and an optional algorithm (default is MD5).
+
+First it checks to see if the default salt is still being used or if an empty salt was passed in. If so, it throws an exception. If not, it does some normalization on the domain that is passed in, removing protocol and www if either exist and trimming off anything after the domain. (This helps keep passwords consistent by reducing the domain to a known minimum.) Then it creates the password concatenating the domain and the salt and by using the optional algorithm.
+
+The result is a 32 character string that is pretty tough to crack and cannot be reverse engineered.
